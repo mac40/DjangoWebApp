@@ -17,3 +17,8 @@ class Article(models.Model):
 
     def snippet(self):
         return self.body[:50] + '...'
+
+    def save(self, force_insert=False, force_update=False, using=None,
+             update_fields=None):
+        self.slug = self.title.replace(' ', '-')
+        return super().save()

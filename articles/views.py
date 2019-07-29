@@ -31,5 +31,5 @@ class CreateArticle(generic.edit.CreateView):
     """
     template_name = 'articles/create_article.html'
     model = Article
-    fields = ['title', 'slug', 'body']
+    fields = ['title', 'body', 'thumb']
     success_url = reverse_lazy('articles:list')

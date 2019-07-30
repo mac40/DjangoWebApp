@@ -8,7 +8,7 @@
         {% if request.GET.next %}
             <input type="hidden" name="next" value="{{request.GET.next}}" />
         {% else %}
-            <input type="hidden" name="next" value="{% url 'articles:list' %}" />
+            <input type="hidden" name="next" value="{% url 'home' %}" />
         {% endif %}
     </form>
 {% endblock %}

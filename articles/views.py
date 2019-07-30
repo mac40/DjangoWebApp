@@ -33,3 +33,9 @@ class CreateArticle(generic.edit.CreateView):
     model = Article
     fields = ['title', 'body', 'thumb']
     success_url = reverse_lazy('articles:list')
+
+    def form_valid(self, form):
+        self.object = form.save(commit=False)
+        self.object.author = self.request.user
+        self.object.save()
+        return super().form_valid(form)

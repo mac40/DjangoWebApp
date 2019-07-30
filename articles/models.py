@@ -22,4 +22,5 @@ class Article(models.Model):
     def save(self, force_insert=False, force_update=False, using=None,
              update_fields=None):
         self.slug = self.title.replace(' ', '-')
+        self.slug = self.slug.replace('&', 'and')
         return super().save()

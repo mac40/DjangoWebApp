@@ -25,7 +25,7 @@ SECRET_KEY = '!0t3g92cu!gl@ndohlmg%v_&r$7dy$5s8!in=v+c3l08*q6=ql'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['mac40raspberry.bounceme.net/']
 
 
 # Application definition
